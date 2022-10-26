@@ -1,0 +1,75 @@
+#resume{
+    padding: 25px 15px;
+    background-color: $black;
+    margin: 0 auto;
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: column;
+    #autoTyping{
+        padding-top: 40px;
+        width: 100%;
+        .colum{
+            display: flex;
+            width: 100%;
+            .number{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+                color: #495162;
+                font-size: 18px;
+                padding: 0;
+                width: 50px;
+            }
+            .content{
+                color: #abb2b1;
+                font-size: 20px;
+                line-height: 24px;
+                .reserved {
+                    color: #3069a7;
+                }
+                .const-name{
+                    color: #A0C1DB;
+                }
+                .variables {
+                    color: #61a8c9;
+                }
+                .string {
+                    color: #b4ab54;
+                }
+            }
+        }
+        @media screen and (max-width: 1140px) {
+            padding-top: 30px;
+            .colum{
+                .number{
+                    font-size: 16px;
+                }
+                .content{
+                    font-size: 18px;
+                }
+            }
+        }
+        @media screen and (max-width: $bigMobile) {
+            width: 550px;
+            padding-top: 25px;
+        }
+        @media screen and (max-width: 620px) {
+            width: 490px;
+            .colum{
+                .number{
+                    font-size: 14px;
+                }
+                .content{
+                    font-size: 17px;
+                }
+            }
+        }
+        @media screen and (max-width: $smallMobile) {
+            width: 450px;
+        }
+        @media screen and (max-width: $verySmallMobile) {
+            width: 390px;
+        }
+    }
+}

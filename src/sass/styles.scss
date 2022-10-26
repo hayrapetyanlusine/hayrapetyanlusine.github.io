@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+//font-family: 'Roboto', sans-serif;
+
+// static files
+@import './sass_modules/main.scss';
+@import './sass_modules/portfolio.scss';
+@import './sass_modules/contact.scss';
+@import './sass_modules/resume.scss';
+@import './sass_modules/about.scss';
+
+
+// global
+@import './sass_modules/global-styles.scss';
+
+.page-name{
+	text-align: center;
+	font-size: 35px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 10px;
+	@media screen and (max-width: $tab) {
+		font-size: 30px;
+	}
+	@media screen and (max-width: $bigMobile) {
+		font-size: 25px;
+		margin-top: 55px;
+	}
+	@media screen and (max-width: $smallMobile) {
+		font-size: 30px;
+		padding: 10px 0px;
+		margin-bottom: 20px;
+	}
+}
+
+p {
+    line-height: 24px;
+}
+
+body{
+	background-color: #424b55;
+	padding: 35px;
+	&::-webkit-scrollbar {
+		width: 7px;
+		height: 7px;
+		overflow: hidden;
+	}
+	&::-webkit-scrollbar-track {
+		background: #ccc;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: $primary;
+	}
+
+	@media screen and (max-width: $bigMobile) {
+		padding: 0px;
+		background-color: $black;
+	}
+}
+
+a {
+	color: $gray;
+	text-decoration: none;
+	display: block;
+	&:hover {
+		color: $primary;
+	}
+}
+
+.btn-up{
+	position: fixed;
+	color: $primary;
+	right: 10px;
+	bottom: 100px;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+	background: $primary;
+	display: none;
+	font-size: 30px;
+	z-index: 33;
+	border: 1px solid transparent;
+	transition: all .2s;
+
+	&.showBtn{
+		display: block;
+	}
+	@media screen and (max-width: $smallMobile) {
+		width: 47px;
+		height: 47px;
+	}
+}

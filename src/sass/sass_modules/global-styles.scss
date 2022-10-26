@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+// colors
+$primary: #04A777; //հիմնական
+$primary-hover: #047a57;
+$primary-background: #047a577e; //#047a5760;
+$gray: #ccc;
+$black: #242424;
+$black-back: rgb(25, 25, 25);
+//$black: #282c34;
+$white: #fff;
+
+
+// $black: #e9e9e9;
+// $gray: #242424;
+//background: #f0f2f5!important;
+
+// media sizes
+$notebook : 1280px; 
+$tab: 1024px;
+$bigMobile: 768px;
+$smallMobile: 520px;
+$verySmallMobile: 420px;
+
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}

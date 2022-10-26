@@ -1,0 +1,86 @@
+#contact{
+    padding: 25px 15px;
+    background-color: $black;
+    margin: 0 auto;
+    flex-basis: 65%;
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: $bigMobile) {
+        height: 100%;
+    }
+    .my-contacts{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 50px;
+        height: 100%;
+        padding-top: 90px;
+        .my-contact{
+            width: 250px;
+            height: 120px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            text-align: center;
+            @media screen and (max-width: $bigMobile){
+                width: 250px;
+                margin-bottom: 40px;
+            }
+            @media screen and (max-width: 680px){
+                width: 220px;
+            }
+            @media screen and (max-width: 530px){
+                width: 280px;
+            }
+            @media screen and (max-width: $verySmallMobile){
+                width: 195px;
+                    svg{
+                        width: 30px;
+                        height: 30px;
+                    }
+            }
+
+            svg{
+                width: 40px;
+                height: 40px;
+                fill: $primary;
+            }
+            h4{
+                font-size: 20px;
+            }
+            &:nth-child(1), &:nth-child(2) {
+                border-right: 1px solid $gray;
+            }
+            div{
+                max-width: 160px;
+                h4{
+                    word-wrap: break-word;
+                }
+            }
+            @media screen and (max-width: 1220px) {
+                width: 220px;
+            }
+            @media screen and (max-width: 1044px) {
+                width: 200px;
+            }
+            
+        }
+        @media screen and (max-width: 990px) {
+            padding-top: 0px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+            .my-contact{
+                width: 300px;
+                &:nth-child(1) {
+                    border-right: unset;
+                    border-bottom: 1px solid $gray;
+                }
+                &:nth-child(2) {
+                    border-right: unset;
+                    border-bottom: 1px solid $gray;
+                }
+            }
+        }
+    }
+}
