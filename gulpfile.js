@@ -18,7 +18,7 @@ const path = "./build";
 
 // sass to css task
 function preproc() {
-	return gulp.src("./src/sass/styles.scss")
+	return gulp.src("./sass/styles.scss")
 	.pipe(sass().on("error", sass.logError))
 	.pipe(gcmq())
 	.pipe(sourcemaps.init())
@@ -37,7 +37,7 @@ function preproc() {
 
 // styles task
 function styles() {
-	return gulp.src("./src/css/**/*.css")
+	return gulp.src("./css/**/*.css")
 	.pipe(gcmq())
 	.pipe(sourcemaps.init())
 	.pipe(autoPrefixer({
@@ -51,6 +51,21 @@ function styles() {
 	.pipe(gulp.dest("./build/css"))
 	.pipe(browserSync.stream());
 }
+// function styles() {
+// 	return gulp.src("./src/css/**/*.css")
+// 	.pipe(gcmq())
+// 	.pipe(sourcemaps.init())
+// 	.pipe(autoPrefixer({
+// 		browsers: ["> 0.01%"],
+// 		cascade: false
+// 	}))
+// 	.pipe(cleanCSS({
+// 		level: 2
+// 	}))
+// 	.pipe(sourcemaps.write("."))
+// 	.pipe(gulp.dest("./build/css"))
+// 	.pipe(browserSync.stream());
+// }
 
 // JS wicth babel
 function scripts () {
