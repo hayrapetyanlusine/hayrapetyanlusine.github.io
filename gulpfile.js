@@ -54,7 +54,7 @@ function styles() {
 
 // JS wicth babel
 function scripts () {
-	return gulp.src("./src/js/**/*.js")
+	return gulp.src("./js/**/*.js")
 	.pipe(sourcemaps.init())
 	.pipe(concat("all.js"))
 	.pipe(babel({
@@ -67,25 +67,43 @@ function scripts () {
 	.pipe(gulp.dest("./build/js"))
 	.pipe(browserSync.stream());
 }
+// function scripts () {
+// 	return gulp.src("./src/js/**/*.js")
+// 	.pipe(sourcemaps.init())
+// 	.pipe(concat("all.js"))
+// 	.pipe(babel({
+// 		"presets": ["@babel/env"]
+// 	}))
+// 	.pipe(uglify({
+// 		toplevel: true
+// 	}))
+// 	.pipe(sourcemaps.write("."))
+// 	.pipe(gulp.dest("./build/js"))
+// 	.pipe(browserSync.stream());
+// }
 
 // IMGS TASK
 function img() {
-	return gulp.src("./src/img/**/*")
-	// .pipe(imagemin())
-	// .pipe(imagemin([
-	// 	imagemin.gifsicle({interlaced: true}),
-	// 	imagemin.mozjpeg({quality: 75, progressive: true}),
-	// 	imagemin.optipng({optimizationLevel: 5}),
-	// 	imagemin.svgo({
-	// 		plugins: [
-	// 			{removeViewBox: true},
-	// 			{cleanupIDs: false}
-	// 		]
-	// 	})
-	// ]))
-
+	return gulp.src("./img/**/*")
 	.pipe(gulp.dest("./build/img"))
 }
+// function img() {
+// 	return gulp.src("./src/img/**/*")
+// 	// .pipe(imagemin())
+// 	// .pipe(imagemin([
+// 	// 	imagemin.gifsicle({interlaced: true}),
+// 	// 	imagemin.mozjpeg({quality: 75, progressive: true}),
+// 	// 	imagemin.optipng({optimizationLevel: 5}),
+// 	// 	imagemin.svgo({
+// 	// 		plugins: [
+// 	// 			{removeViewBox: true},
+// 	// 			{cleanupIDs: false}
+// 	// 		]
+// 	// 	})
+// 	// ]))
+
+// 	.pipe(gulp.dest("./build/img"))
+// }
 
 // delete build folder and all files in build folder
 function clean() {
@@ -106,7 +124,7 @@ function libs() {
 
 // all html files from src folder to build folder
 function htmls() {
-	return gulp.src(["./index.html", "./src/*.html"])
+	return gulp.src("./*.html")
 	.pipe(gulp.dest("./build/"))
 	.pipe(browserSync.stream());
 }
