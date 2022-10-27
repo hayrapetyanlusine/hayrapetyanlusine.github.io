@@ -106,10 +106,15 @@ function libs() {
 
 // all html files from src folder to build folder
 function htmls() {
-	return gulp.src("./src/*.html")
+	return gulp.src(["./index.html", "./src/*.html"])
 	.pipe(gulp.dest("./build/"))
 	.pipe(browserSync.stream());
 }
+// function htmls() {
+// 	return gulp.src("./src/*.html")
+// 	.pipe(gulp.dest("./build/"))
+// 	.pipe(browserSync.stream());
+// }
 
 function watch () {
 	browserSync.init({
