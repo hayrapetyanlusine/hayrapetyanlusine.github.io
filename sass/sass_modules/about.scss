@@ -34,7 +34,7 @@
         .resume-header{
             display: flex;
             align-items: center;
-            padding: 15px;
+            padding: 5px;
             justify-content: space-between;
             margin-top: 20px;
             border-bottom: 1px solid $gray;
@@ -225,7 +225,8 @@
                 text-align: justify;
                 letter-spacing: 0.5px;
                 @media screen and(max-width: 915px) {
-                    padding: 0 15px;
+                    padding: 0 5px;
+                    font-style: italic;
                 }
             }
         }
@@ -234,7 +235,8 @@
             padding: 10px 10px 20px 0px;
             font-style: italic;
             @media screen and(max-width: 915px) {
-                padding: 10px 15px;
+                // padding: 10px 15px;
+                padding: 10px 15px 10px 7px;
             }
         }
         .education{
@@ -244,7 +246,7 @@
                 display: flex;
                 align-items: space-between;
                 justify-content: space-evenly;
-                padding: 10px;
+                //padding: 10px;
                 .educate-time{
                     padding: 0 10px;
                     @include df;
@@ -282,8 +284,8 @@
                 }
                 .educate-name{
                     width: 250px;
-                    padding: 10px;
-                    padding: 0 10px;
+                    // padding: 10px;
+                    // padding: 0 10px;
                     @include df;
                     p{
                         font-size: 20px;
@@ -430,6 +432,7 @@
             }
             @media screen and (max-width: $bigMobile) {
                 .languages{
+                    padding: 5px;
                     .language{
                         progress{
                             width: 270px;
