@@ -174,7 +174,6 @@
             }
             .pers-info{
                 min-width: 250px;
-                padding: 20px;
                 p{
                     font-size: 20px;
                     padding-bottom: 10px;
@@ -326,8 +325,10 @@
                 }
                 .language{
                     display: flex;
-                    justify-content: space-between;
-                    align-items: center;
+                    flex-wrap: wrap;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+
                     height: 40px;
                     p{
                         padding-right: 13px;
@@ -335,7 +336,7 @@
                     }
                     progress{
                         display: block;
-                        width: 250px;
+                        width: 230px;
                         height: 9px;
                         border-radius: 50px;
 
@@ -349,7 +350,7 @@
                             transition: all .9s;
                         }
                         @media screen and (max-width: 820px){
-                            width: 200px;
+                            width: 190px;
                         }
                     }
                 }
@@ -400,6 +401,8 @@
                     margin-bottom: 18px;
                     .language{
                         padding: 0px;
+                        justify-content: space-between;
+                        align-items: center;
                         progress{
                             width: 250px;
                         }
